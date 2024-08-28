@@ -34,6 +34,7 @@ import com.shounakmulay.telephony.utils.Constants.SHARED_PREFERENCES_NAME
 import com.shounakmulay.telephony.utils.Constants.SHARED_PREFS_DISABLE_BACKGROUND_EXE
 import com.shounakmulay.telephony.utils.Constants.SMS_BACKGROUND_REQUEST_CODE
 import com.shounakmulay.telephony.utils.Constants.SMS_DELIVERED
+import com.shounakmulay.telephony.utils.Constants.SMS_FAIL
 import com.shounakmulay.telephony.utils.Constants.SMS_QUERY_REQUEST_CODE
 import com.shounakmulay.telephony.utils.Constants.SMS_SEND_REQUEST_CODE
 import com.shounakmulay.telephony.utils.Constants.SMS_SENT
