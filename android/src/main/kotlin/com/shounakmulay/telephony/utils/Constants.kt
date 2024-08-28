@@ -35,6 +35,7 @@ object Constants {
   const val HANDLE_BACKGROUND_MESSAGE = "handleBackgroundMessage"
   const val SMS_SENT = "smsSent"
   const val SMS_DELIVERED = "smsDelivered"
+  const val SMS_FAIL = "smsFail"
   
   // Invoke Method Arguments
   const val HANDLE = "handle"

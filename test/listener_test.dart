@@ -31,7 +31,7 @@ main() {
     test("sms sent status", () async {
       listener = (status) {
         expect(status, SendStatus.SENT);
-      };
+      } as SmsSendStatusListener;
 
       final args = {
         "address": "0000000000",

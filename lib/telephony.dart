@@ -10,7 +10,7 @@ part 'constants.dart';
 part 'filter.dart';
 
 typedef MessageHandler(SmsMessage message);
-typedef SmsSendStatusListener(SendStatus status);
+typedef SmsSendStatusListener(SendStatus status, dynamic arguments);
 
 @pragma('vm:entry-point')
 void _flutterSmsSetupBackgroundChannel(
@@ -147,9 +147,11 @@ class Telephony {
         final message = call.arguments["message"];
         return _onNewMessage(SmsMessage.fromMap(message, INCOMING_SMS_COLUMNS));
       case SMS_SENT:
-        return _statusListener(SendStatus.SENT);
+        return _statusListener(SendStatus.SENT, call.arguments);
       case SMS_DELIVERED:
-        return _statusListener(SendStatus.DELIVERED);
+        return _statusListener(SendStatus.DELIVERED, call.arguments);
+      case SMS_FAIL:
+        return _statusListener(SendStatus.FAIL, call.arguments);
     }
   }
 
